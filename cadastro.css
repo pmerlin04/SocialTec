@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+  }
+html, body{
+    width: 100vw;
+    overflow: hidden;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(29, 29, 29);
+}
+
+p, h1{
+    color: #fff;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form label input{
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: none;
+    width: 100%;
+    height: 30%;
+    margin-top: 15%;
+    font-size: 3.2vh;
+    outline: none;
+    border-bottom: 2px solid #000000;
+}
+form label input:hover{
+    width: 105%;
+}
+form input[type="submit"]{
+    position: relative;
+    margin-top: 5vh;
+    width: 50%;
+    height: 20%;
+    background: transparent;
+    color: #fff;
+    border:1px solid #fff;
+    border-radius: 10px;
+}
+form input[type="submit"]:hover{
+    background: #fff;
+    color: #19012c;
+    border:1px solid #fff;
+}
+.checkbox input[type="checkbox"]{
+    display: flex;
+    width: 3.2vh;
+    margin-right: 0.8vh;
+    background-color: #333333;
+}
+.checkbox a{
+    left: 0.9vh;
+}
+.checkbox p{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    color: #686767;
+    font-size: 2vh;
+}
+.checkbox a{
+    position: relative;
+    color: #808080;
+    font-size:  2.08vh;
+}
+.checkbox{
+    margin-top: -0vh;
+    right: 11vh;
+}
+.checkbox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:baseline;
+}
+.Cadastro form input[value="Cadastrar"]{
+    font-size: 4.8vh;
+}
+.Cadastro{
+    position: absolute;
+    left: 55%;
+    width: 56vh;
+    height: 90vh;
+    border: 2px solid none;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: rgba(255,255,255, 0.03);
+    backdrop-filter: blur(10px) ;
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 20px 20px 0 #00000025;
+    z-index: 0;
+}
+
+/*MENSAGEM CASO A SENHA OU EMAIL ESTIVER INCORRETO*/
+.alertaRed{
+    position: absolute;
+    text-align: center;
+    padding: 1.042vw;
+    margin-top: 31.250vw;
+    margin-left: 38vw;
+    width: 15.625vw;
+    border: solid 1px #fff;
+    background: rgba(255,255,255, 0.03);
+    border-radius: 8px;
+    color: red;
+    z-index: 1;
+    font-size: 16px;
+}
+
+/*MENSAGEM CASO A SENHA OU EMAIL ESTIVER INCORRETO*/
+.alertaPrivacidade{
+    visibility: hidden;
+    position: absolute;
+    text-align: center;
+    padding: 1.042vw;
+    margin-top: 35.417vw;
+    margin-left: 0.521vw;
+    width: 15.625vw;
+    border: solid 1px #fff;
+    background: rgba(255,255,255, 0.03);
+    border-radius: 8px;
+    color: red;
+    z-index: 1;
+    font-size: 16px;
+}
+
+
+.tudoLogin{
+    margin: 3.2vh;
+}
+.loginOpt{
+    position: relative;
+    top: 3.2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginOpt p{
+    cursor: pointer;
+    font-size: 4vh;
+}
+.Cadastro .loginOpt a{
+    cursor: pointer;
+    margin-right: 3.3vh;
+}
+.loginOpt a{
+    text-decoration: none;
+}
+.Cadastro .loginOpt .CadastroP{
+    border-bottom: 1px solid #000000;
+}
+.tituloLogin h1{
+    position: relative;
+    font-size: 3.2vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 5.6vh;
+}
+#olho{
+    position: absolute;
+    width: 3vh;
+    margin-left: 35.5vh;
+    margin-top: -3.5vh;
+}
+.EsqueSenha{
+    margin-top: -2vh;
+    margin-left: -20vh;
+}
+.EsqueSenha a{
+    font-size: 2vh;
+    color: #686767;
+}
+
+
+/* CUBO */
+.cube{
+    width: 300px;
+    height: 300px;
+}
+.cube{
+    position: absolute;
+    top: 22vh;
+    left: 38vh;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg);
+    animation: animate 4s linear infinite;
+}
+
+ @keyframes animate{
+    0%{
+        transform: rotateX(-20deg) rotateY(0deg);
+}
+    100%{
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+.cube div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.cube div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#16003a, #7a00ec);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px)
+}
+.top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #16003a;
+    transform: rotateX(90deg) translateZ(150px);
+}
+.top::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #7a00ec;
+    transform: translateZ(-380px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(94, 1, 243, 0.2),
+    0 0 200px rgba(118, 0, 228, 0.4),
+    0 0 300px rgba(119, 3, 196, 0.6),
+    0 0 400px rgba(128, 0, 247, 0.8),
+    0 0 500px rgba(195, 0, 255, 0.63);
+} 
+
+
+@media screen and (max-width :1075px){
+    .cube{
+        width: 250px;
+        height: 250px;
+    }
+    .cube div span{
+        transform: rotateY(calc(90deg * var(--i))) translateZ(125px)
+    }
+    .top{
+        transform: rotateX(90deg) translateZ(125px);
+    }
+    .top::before{
+        transform: translateZ(-300px);
+    }
+}
+@media screen and (max-width :860px){
+    .cube{
+        width: 200px;
+        height: 200px;
+    }
+    .cube div span{
+        transform: rotateY(calc(90deg * var(--i))) translateZ(100px)
+    }
+    .top{
+        transform: rotateX(90deg) translateZ(100px);
+    }
+    .top::before{
+        transform: translateZ(-250px);
+    }
+}
+@media screen and (max-width :779px){
+    .cube{
+        width: 170px;
+        height: 170px;
+    }
+    .cube div span{
+        transform: rotateY(calc(90deg * var(--i))) translateZ(85px)
+    }
+    .top{
+        transform: rotateX(90deg) translateZ(85px);
+    }
+    .top::before{
+        transform: translateZ(-200px);
+    }
+}
+@media screen and (max-width :650px){
+    .cube{
+        width: 150px;
+        height: 150px;
+    }
+    .cube div span{
+        transform: rotateY(calc(90deg * var(--i))) translateZ(74px)
+    }
+    .top{
+        transform: rotateX(90deg) translateZ(74px);
+    }
+    .top::before{
+        transform: translateZ(-200px);
+    }
+}
+@media screen and (max-width :580px){
+    .cube{
+        left: 30vh;
+    }
+}
+@media screen and (max-width :499px){
+    .cube{
+        left: 25vh;
+    }
+}
+@media screen and (max-width :483px){
+    .cube{
+        width: 125px;
+        height: 125px;
+    }
+    .cube div span{
+        transform: rotateY(calc(90deg * var(--i))) translateZ(62px)
+    }
+    .top{
+        transform: rotateX(90deg) translateZ(62px);
+    }
+    .top::before{
+        transform: translateZ(-200px);
+    }
+}
+@media screen and (max-width :388px){
+    .cube{
+        width: 100px;
+        height: 100px;
+    }
+    .cube div span{
+        transform: rotateY(calc(90deg * var(--i))) translateZ(50px)
+    }
+    .top{
+        transform: rotateX(90deg) translateZ(50px);
+    }
+    .top::before{
+        transform: translateZ(-150px);
+    }
+}
+@media screen and (max-width :485px){
+    form input[type="submit"]{
+        margin-top: 0vh;
+    }
+}

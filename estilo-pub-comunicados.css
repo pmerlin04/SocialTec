@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    background-color: rgb(252, 250, 253);
+    transition: background 0.2s linear;
+    overflow-x: hidden;
+}
+
+
+/*MODO ESCURO DAS TELAS*/
+body.dark{
+    background: #18191A;
+}
+
+.box.dark1{
+    background: linear-gradient(256.04deg, #1D1D1D 1.11%, rgba(35, 35, 36, 0.804924) 30.03%, rgba(56, 56, 56, 0.503863) 77.13%, rgba(44, 44, 44, 0.797) 101.58%);
+}
+
+label#titulo.dark2, label#codigo.dark2, label#texto_comunicado.dark2, label#foto.dark2, p#descricao_comunicado.dark2, #nav-links li a.dark2, #feed.dark2{
+    color: #fff;
+}
+
+/*cabeçalho*/
+#nav-menu{
+    height: 5.208vw;
+    width: 97.917vw;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.042vw;
+}
+
+#nav-menu img{
+    width: 6.250vw;
+}
+
+#nav-links{
+    display: flex;
+    width: 31.250vw;
+    margin-left: 31.250vw;
+    justify-content: space-around;
+}
+
+#nav-links li {
+    list-style-type: none;
+}
+
+#nav-links li a {
+    color: #000;
+    font-size: 1vw;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/*OPCAO MODO ESCURO OU CLARO*/
+.inputModo{
+    margin-top: -6.7vw;
+    margin-left: 92.188vw;
+    align-items: center;
+    width: 5.208vw;
+    height: 2.604vw;
+}
+
+.checkbox{
+    opacity: 0;
+}
+
+/*botao para ativar o modo escuro*/
+.inputModo .label{
+    background-color: #8514c7;
+    border-radius: 2.604vw;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.260vw;
+    height: 1.354vw;
+    width: 2.604vw;
+    transform: scale(1.5);
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 2.604vw;
+    position: absolute;
+    top: 0.260vw;
+    left: 0.156vw;
+    height: 1.354vw;
+    width: 1.458vw;
+    transform: translateX(0vw);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(1.250vw);
+}
+
+.fa-moon{
+    color: #fff;
+}
+
+.fa-sun{
+    color: #fff;
+}
+
+/*PARTE DA POSTAGEM*/
+.box{
+    position: absolute;
+    top: 27.083vw;
+    left: 46vw;
+    width: 46vw;
+    height: 39vw;
+    transform: translate(-20.833vw, -20.833vw);
+    background: white;
+    box-shadow: 0.365vw 0.260vw 1.042vw 0.260vw rgba(0, 0, 0, 0.32);
+    padding: 0.781vw;
+    border-radius: 0.781vw;
+    color: black;
+    z-index: 0;
+}
+
+/*CAIXA DA BOX*/
+fieldset.caixa{
+    border: 0.156vw solid #8514c7;
+    height: 37vw;
+    width: 43vw;
+    margin-left: 0.781vw;
+}
+
+/*TITULO DA BOX*/
+legend{
+    font-size: 1.042vw;
+    padding: 0.521vw;
+    text-align: center;
+    border-radius: 0.417vw;
+    background-color: #8514c7;
+    border: 0.052vw solid #8514c7;
+    color: #fff;
+}
+
+/*LABEL DO NOME DO USUARIO*/
+label#titulo{
+    color: black;
+    font-size: 1vw;
+}
+
+/*LABEL DO CODIGO DO REPRESENTANTE*/
+label#codigo{
+    color: black;
+    font-size: 1vw;
+}
+
+/*INPUT DE TODOS OS CAMPOS*/
+input{
+    display: block;
+    background:none;
+    border: none;
+    border-bottom: 0.052vw solid #000;
+    outline: none;
+    color: black;
+    font-size: 0.781vw;
+    width: 41.667vw;
+    margin-bottom: 2vw;
+    margin-top: 0.521vw;
+}
+
+
+input#codigo{
+    display: block;
+    background:none;
+    border: none;
+    border-bottom: 0.052vw solid #000;
+    outline: none;
+    color: black;
+    font-size: 0.781vw;
+    width: 41.667vw;
+    height: 0.900vw;
+    margin-top: 0.521vw;
+}
+
+input#titulo{
+    display: block;
+    background:none;
+    border: none;
+    border-bottom: 0.052vw solid #000;
+    outline: none;
+    color: black;
+    font-size: 0.781vw;
+    font-weight: 600;
+    font-size: 0.781vw;
+    width: 41.667vw;
+    height: 0.900vw;
+    margin-top: 0.521vw;
+}
+
+/*LABEL DO TEXTO*/
+label#texto_comunicado{
+    margin-top: -6.688vw;
+    margin-bottom: -1.042vw;
+    font-size: 1vw;
+    height: -4.688vw;
+    color: black;
+}
+
+/*PARAGRAFO DO TEXTO*/
+p#descricao_comunicado{
+    margin-bottom: 0.677vw;
+    width: 36.458vw;
+    height: 2.4vw;
+    font-size: 1vw;
+}
+
+
+/*ARÉA DO TEXTO*/
+#partTexto{
+    /* background-color: tomato; */
+    height: 16vw;
+    width: 43vw;
+}
+
+/*ESSE TEXTAREA É DO TEXTO DA PERGUNTA*/
+textarea{
+    background-color: rgba(95, 95, 95, 0.6);
+    border-radius: 0.260vw;
+    width: 40.625vw;
+    height: 8.333vw;
+    color: black;
+    border-color: none;
+    font-size: 0.938vw;
+    outline: none;
+    padding: 0.521vw;
+}
+
+
+/*PARTE DA FOTO*/
+div#partFoto{
+    margin-top: -4px;
+    width: 42vw;
+    height: 4vw;
+
+}
+
+label#foto{
+    color: black;
+    font-size: 1vw;
+}
+
+#partFoto input#arquivo{
+    border-bottom: none;
+}
+
+
+input#incluir{
+    cursor:pointer;
+    margin-top: 3.542vw;
+    margin-bottom: 0.781vw;
+    margin-left: 11vw;
+    width: 20.833vw;
+    height: 1.823vw;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 0.521vw;
+    font-size: 1vw;
+    font-weight: 600;
+    background-color: #8514c7;
+    color: #fff;
+}
+
+
+/*MENSAGEM CASO ENCONTRE PALAVRAO*/
+.alertaRedLinguagem{
+    position: absolute;
+    text-align: center;
+    padding: 0.260vw;
+    margin-top: 39.5vw;
+    margin-left: 36vw;
+    width: 25vw;
+    height: 2vw;
+    border: solid 0.052vw #fff;
+    border-radius: 0.417vw;
+    color: red;
+    z-index: 1;
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+/*MENSAGEM CASO ENCONTRE CAMPO EM BRANCO*/
+.alertaRedIden{
+    position: absolute;
+    text-align: center;
+    padding-top: 1vw;
+    margin-top: 39.5vw;
+    margin-left: 36.4vw;
+    width: 25vw;
+    height: 2vw;
+    border: solid 0.052vw #fff;
+    border-radius: 0.417vw;
+    color: red;
+    z-index: 1;
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+/*MENSAGEM CASO ENCONTRE COD DIFERENTE*/
+.alertaRedCodigo{
+    position: absolute;
+    text-align: center;
+    margin-top: 40.5vw;
+    margin-left: 39vw;
+    width: 20vw;
+    height: 1.146vw;
+    border: solid 0.052vw #fff;
+    border-radius: 0.417vw;
+    color: red;
+    z-index: 1;
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+/*
+.guiaAjuda{
+    margin-left: 78.125vw;
+    margin-top: 10.4167vw;
+    width: 15.625vw;
+    height: 5.2083vw;
+    background-color: tomato;
+}
+
+@media screen and (max-width: 31.25vw){
+    .box{
+        margin-top: 13%;
+        width: 70%;
+        height: 60%;
+    }
+
+    
+    textarea{
+        width: 15.625vw;
+    }
+
+    fieldset.caixa{
+        border: 0.052vw solid red;
+        width: 5.2083vw;
+        margin-top: -0.3646vw;
+        height: 22.9167vw;
+        width: 10%;
+    }
+
+    fieldset#trechoCod{
+        max-width: 90%;
+        min-width: 90%;
+    } 
+}
+*/

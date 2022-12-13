@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+        background-color: rgb(252, 250, 253);
+        transition: background 0.2s linear;
+}
+
+
+/*MODO ESCURO DAS TELAS*/
+body.dark{
+    background: rgb(19, 19, 19);
+    background: linear-gradient(180deg, rgb(19, 19, 19) 0%, rgba(23,20,28,1) 100%);
+}
+
+fieldset.grupos.dark4{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(20, 20, 20, 0.408333) 99.99%, rgba(0, 0, 0, 0.408333) 100%);
+    border: .0521vw solid gray;
+}
+
+
+#logo{
+    height: 5.4688vw;
+    width: 5.4688vw;
+    justify-content: center;
+    display: flex;
+}
+
+
+
+/*OPCAO MODO ESCURO OU CLARO*/
+.input{
+    margin-top: 4.6875vw;
+    margin-right: 5vw;
+    display:flex;
+    align-items: center;
+    justify-content: right;
+
+}
+
+.checkbox{
+    opacity: 0;
+}
+
+/*BOTÃO ATIVAR MODO ESCURO*/
+.input .label{
+    background-color: #000000;
+    border-radius: 2.6042vw;
+    cursor: pointer;
+    display:flex;
+    margin-top: -4.6875vw;
+    align-items: center;
+    justify-content: space-between;
+    padding: .2604vw;
+    height: 1.3542vw;
+    width: 2.6042vw;
+    transform: scale(1.5);
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 2.6042vw;
+    position: absolute;
+    top: .2083vw;
+    left: .2188vw;
+    height: 1.4583vw;
+    width: 1.4583vw;
+    transform: translateX(0vw);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(1.25vw);
+}
+
+.fa-moon{
+    color: #fff;
+}
+
+.fa-sun{
+    color: #fff;
+}
+
+
+/*PARTE DA POSTAGEM*/
+.box{
+    position: absolute;
+    top: 27.083vw;
+    left: 46vw;
+    width: 46vw;
+    height: 32vw;
+    transform: translate(-20.833vw, -20.833vw);
+    background: white;
+    box-shadow: 0.365vw 0.260vw 1.042vw 0.260vw rgba(0, 0, 0, 0.32);
+    padding: 0.781vw;
+    border-radius: 0.781vw;
+    color: black;
+    z-index: 0;
+}
+
+legend{
+    font-size: 1.4vw;
+    padding: 0.521vw;
+    text-align: center;
+}
+
+fieldset#borda{
+    height: 30vw;
+}
+
+label{
+    padding-top: 1.0417vw;
+    padding-bottom: 1vw;
+    height: 1vw;
+    width: 15vw;
+    font-size: 1.1vw;
+    display: block;
+}
+
+input.inputUser{
+    display: block;
+    width: 20.8333vw;
+    height: 1.2vw;
+    padding-right: 0.260vw;
+    margin-bottom: 0.781vw;
+    border-radius: 0.104vw;
+    outline: none;
+    border: 0.052vw solid gray;
+    color: #000;
+    font-weight: 600;
+}
+
+
+select.inputUser{
+    display: block;
+    width: 21.1vw;
+    height: 1.5vw;
+    margin-bottom: 0.781vw;
+    border: 0.052vw solid gray;
+    color: #000;
+    font-weight: 600;
+    border-radius: 0.104vw;
+}
+
+option{
+    color: #000;
+    font-weight: 600;
+}
+
+textarea.inputUser{
+    width: 20.8333vw;
+    height: 6.250vw;
+    border-radius: 0.104vw;
+    font-weight: 600;
+    outline: none;
+    color: #000;
+    border: 0.052vw solid gray;
+}
+
+
+input[type=submit]#incluir{
+    position: relative;
+    height: 2.4479vw;
+    width: 5vw;
+    margin-left: 19.8vw;
+    margin-top: 3.7vw;
+    border-radius: .2604vw;
+    border: .0521vw solid #000000;
+    background-color: #000000;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+textarea#texto::-webkit-scrollbar{
+    width: .5208vw;
+}
+ textarea#texto::-webkit-scrollbar-thumb{
+     background-color: rgb(165, 165, 165);
+     border-radius: .2604vw;
+ }
+
+ /*MENSAGEM CASO O CAMPO E-MAIL OU PROBLEMA FIQUE VAZIO*/
+.alertaRedEmail{
+    position: absolute;
+    margin-top: 32vw;
+    margin-left: 39vw;
+    width: 23vw;
+    height: 1.3vw;
+    color: red;
+    font-weight: 600;
+    z-index: 1;
+    font-size: 1.2vw;
+}
+
+.alertaRedLinguagem{
+    position: absolute;
+    margin-top: 17vw;
+    margin-left: 52vw;
+    width: 17vw;
+    height: 6vw;
+    padding: 5px;
+    color: red;
+    font-weight: 600;
+    z-index: 1;
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+
+/*GRUPOS*/
+fieldset.grupos{
+    text-align: left;
+    margin-top: 0vw;
+    position: fixed;
+    width: 21%;
+    border: none;
+    height: 5vw;
+    top: 0;
+    background: transparent;
+    
+}
+
+fieldset.grupos h1{
+    text-align: center;
+    color: black;
+    margin-bottom: 2.6042vw;
+    margin-top: -3.5vw;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+fieldset.grupos img{
+    width: 2.0833vw;
+    height: 2.0833vw;
+    margin-top: -1vw;
+}
+
+
+/*PARTE DO BOTÃO DOS GRUPOS*/
+.botao{
+    display: none;
+}
+
+.botao div{
+    width: 1.5625vw;
+    height: .2604vw;
+    margin: .2083vw;
+    margin-left: 26.0417vw;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/*PARTE DA RESPONSIVIDADE DOS GRUPOS*/
+@media (min-width:320px) and (max-width:768px){
+
+     /*botao para ativar o modo escuro*/
+    .input{
+        margin-top: 5vw;
+        margin-left: 40vw;
+        width: 50vw;
+    }
+
+    /*BOTÃO ATIVAR MODO ESCURO*/
+    .input .label{
+        background-color: #000000;
+        border-radius: 2.6042vw;
+        cursor: pointer;
+        display:flex;
+        margin-top: -4.6875vw;
+        align-items: center;
+        justify-content: space-between;
+        padding: .2604vw;
+        height: 5vw;
+        width: 10vw;
+        transform: scale(1.5);
+    }
+
+    .label .ball{
+        background-color: #fff;
+        border-radius: 2.6042vw;
+        position: absolute;
+        top: 0.6vw;
+        left: .2188vw;
+        height: 4vw;
+        width: 4vw;
+        transform: translateX(0vw);
+        transition: transform 0.2s linear;
+    }
+
+    .checkbox:checked + .label .ball{
+        transform: translateX(6vw);
+    }
+
+    input[type=button].curtir{
+        margin-left: .5208vw;
+    }
+    input[type=submit].comentar{
+        margin-right: .5208vw;
+    }
+
+    #logo{
+        height: 13vw;
+        width: 17vw;
+        margin-left: -3vw;
+        margin-top: -3vw;
+    }
+
+    fieldset.grupos{
+        text-align: left;
+        margin-top: 0vw;
+        position: fixed;
+        border: none;
+        width: 50vw;
+        height: 5vw;
+        top: 0;
+        background: transparent;
+        
+    }
+    
+    fieldset.grupos h1{
+        text-align: center;
+        color: black;
+        font-size: 7vw;
+        margin-top: -11vw;
+        margin-left: 10vw;
+    }
+
+
+    .box{
+        top: 50vw;
+        left: 27vw;
+        width: 85vw;
+        height: 78vw;
+    }
+
+    legend{
+        font-size: 4vw;
+        padding: 0.521vw;
+        text-align: center;
+    }
+    
+    fieldset#borda{
+        height: 70vw;
+    }
+
+    label{
+        padding-top: 1.3vw;
+        padding-bottom: 4vw;
+        height: 1vw;
+        width: 40vw;
+        font-size: 3vw;
+        display: block;
+    }
+
+    label#problema{
+        padding-top: 5vw;
+        padding-bottom: 4vw;
+    }
+
+    input.inputUser{
+        display: block;
+        width: 50.4vw;
+        height: 3vw;
+        padding-right: 0.260vw;
+        margin-bottom: 0.781vw;
+        border-radius: 0.104vw;
+        outline: none;
+        border: 0.052vw solid gray;
+        color: #000;
+        font-weight: 600;
+    }
+
+    select.inputUser{
+        display: block;
+        width: 51.5vw;
+        height: 4.5vw;
+        margin-bottom: 5vw;
+        border: 0.052vw solid gray;
+        color: #000;
+        font-weight: 600;
+        font-size: 3vw;
+        border-radius: 0.104vw;
+    }
+
+    option{
+        color: #000;
+        font-weight: 600;
+        height: 10vw;
+    }
+
+    label#txt{
+        padding-bottom: -10vw;
+    }
+
+    textarea.inputUser{
+        margin-bottom: 6vw;
+        max-width: 50vw;
+        min-width: 50vw;
+        max-height: 10vw;
+        min-height: 10vw;
+        border-radius: 0.104vw;
+        font-weight: 600;
+        outline: none;
+        color: #000;
+        border: 0.052vw solid gray;
+    }
+    
+
+    input[type=submit]#incluir{
+        position: relative;
+        height: 6vw;
+        width: 20vw;
+        margin-left: 30vw;
+        margin-top: 5vw;
+        border-radius: .2604vw;
+        border: .0521vw solid #000000;
+        background-color: #000;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .alertaRedEmail{
+        position: absolute;
+        margin-top: 80vw;
+        margin-left: 22vw;
+        width: 55vw;
+        height: 7vw;
+        color: red;
+        font-weight: 600;
+        z-index: 1;
+        font-size: 3vw;
+    }
+
+    .alertaRedLinguagem{
+        position: absolute;
+        margin-top: 77vw;
+        margin-left: 18vw;
+        width: 55vw;
+        height: 6vw;
+        padding: 5px;
+        color: red;
+        font-weight: 600;
+        z-index: 1;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+
+}
